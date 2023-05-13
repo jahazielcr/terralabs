@@ -55,7 +55,7 @@ module "autoscaling" {
   image_id        = data.aws_ami.ubuntu.id
   key_name        = var.key_name
   private_subnet  = module.network.private_subnet
-  sgPrivate       = [module.securityGroups.private_allow_ssh_from_bastion_id, module.securityGroups.private_allow_http_from_bastion_id, module.securityGroups.private_allow_https_from_bastion_id]
+  sgPrivate       = [module.securityGroups.private_allow_ssh_from_bastion_id, module.securityGroups.private_allow_http_from_bastion_id, module.securityGroups.private_allow_https_from_bastion_id, module.securityGroups.public_http_security_group_id]
   tgWebserver_arn = module.loadBalancer.tgWebserver_arn
 }
 

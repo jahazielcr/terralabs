@@ -27,6 +27,6 @@ load_balancer_type = "application"
 ## Autoscaling
 #spot_price = "0.016"
 
-domain              = "aws-terralabs.tk"
+domain = "aws-terralabs.tk"
 
 
